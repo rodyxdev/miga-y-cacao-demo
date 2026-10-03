@@ -1,0 +1,149 @@
+/* Miga y Cacao: a working pantry ledger, not a marketing dashboard. */
+@media screen {
+  :root { color: #3c2926; background: #fffdf9; --green: #8d3343; --green-dark: #6f2231; --muted: #73635c; --line: #e2d9d0; --cream: #f5eae0; --radius: 6px; }
+  h1 { font-family: 'Segoe UI', Arial, sans-serif; font-weight: 650; font-size: clamp(29px, 2.6vw, 38px); letter-spacing: -1.2px; }
+  h2, h3 { color: #3c2926; }
+  .eyebrow, .nav-caption { letter-spacing: .25px; text-transform: none; font-size: 12px; color: #73635c; }
+  .sidebar { background: #f7eee6; border-color: #e2d9d0; }
+  .brand { color: #3c2926; }
+  .brand strong { font-size: 23px; }
+  .brand-mark { background: #f1dbcf; border-color: #e5cfc4; color: #8d3343; border-radius: 50%; }
+  .brand small, .business-switch small, .sidebar-user small { color: #73635c; letter-spacing: .6px; }
+  .business-switch { background: transparent; border: 0; border-top: 1px solid #e2d9d0; border-bottom: 1px solid #e2d9d0; border-radius: 0; }
+  .business-switch-icon { background: #f1dbcf; color: #8d3343; }
+  .nav-item { color: #73635c; border-radius: 4px; font-size: 14px; }
+  .nav-item.active { background: #8d3343; color: #fff; }
+  .nav-item.active svg { color: #fff; }
+  .nav-item:hover { background: #ecdccf; color: #3c2926; }
+  .nav-item.active:hover { background: #6f2231; color: #fff; }
+  .nav-count, .nav-count.neutral { background: #f7e6bd; color: #694a1c; }
+  .sidebar-note { color: #73635c; border-color: #e2d9d0; }
+  .sidebar-user { border-color: #e2d9d0; }
+  .avatar { color: #8d3343; background: #f1dbcf; border-color: #e5cfc4; }
+  .workspace, .main-content { background: #fffdf9; }
+  .topbar { background: #fffdf9; border-color: #e2d9d0; }
+  .topbar-breadcrumb, .topbar-breadcrumb strong { color: #73635c; }
+  .demo-strip { background: #f5eae0; border-color: #e2d9d0; color: #73635c; }
+  .date-line { color: #73635c; font-size: 12px; padding-bottom: 16px; border-bottom: 1px solid #e2d9d0; }
+  .page-heading { margin-top: 22px; margin-bottom: 28px; }
+  .page-heading p:not(.eyebrow) { font-size: 14px; color: #73635c; }
+  .page-heading > .button { margin-top: 0; }
+  .button { font-size: 14px; border-radius: 5px; min-height: 44px; }
+  .button-primary:hover { background: #6f2231; }
+  .button-secondary, .text-button { color: #8d3343; }
+  .button-secondary { border-color: #e2d9d0; }
+  .text-button:hover { color: #6f2231; }
+  .card { border-color: #e2d9d0; box-shadow: none; }
+  .section-heading h2 { font-size: 17px; }
+  .section-heading p, .section-heading .text-button, .card-footer { font-size: 12px; color: #73635c; }
+  .pantry-overview { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(235px, 1fr); gap: 28px; align-items: stretch; margin-bottom: 28px; }
+  .pantry-list { background: #fff; border: 1px solid #e2d9d0; border-radius: 6px; overflow: hidden; }
+  .pantry-list-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 24px; border-bottom: 1px solid #e2d9d0; }
+  .pantry-list-heading .eyebrow { display: block; margin-bottom: 5px; }
+  .pantry-list-heading h2 { font-size: 22px; font-weight: 600; }
+  .pantry-count { font-size: 12px; color: #8d3343; white-space: nowrap; }
+  .pantry-row { width: 100%; display: flex; align-items: center; gap: 14px; text-align: left; padding: 13px 24px; border-bottom: 1px solid #f1eae3; min-height: 65px; }
+  .pantry-row:hover { background: #fcf7f1; }
+  .pantry-row > span:nth-child(2) { flex: 1; min-width: 0; }
+  .pantry-row strong { display: block; font-size: 14px; font-weight: 600; color: #3c2926; }
+  .pantry-row small { display: block; font-size: 12px; color: #73635c; margin-top: 2px; }
+  .pantry-stock { text-align: right; }
+  .pantry-stock strong { font-variant-numeric: tabular-nums; }
+  .pantry-row > svg { color: #8d3343; }
+  .pantry-action { width: 100%; padding: 15px 24px; color: #8d3343; font-weight: 600; font-size: 14px; display: flex; justify-content: space-between; align-items: center; background: #fcf7f1; }
+  .pantry-action:hover { background: #f5eae0; }
+  .pantry-clear { padding: 24px; }
+  .pantry-summary { padding: 25px 28px; background: #f7e6bd; border-radius: 6px; color: #493721; }
+  .pantry-summary h2 { font-size: 23px; line-height: 1.2; margin: 8px 0 24px; color: #493721; }
+  .pantry-summary .eyebrow { color: #694f2d; }
+  .pantry-summary dl { margin: 0; }
+  .pantry-summary dl > div { display: flex; align-items: baseline; justify-content: space-between; gap: 15px; padding: 13px 0; border-top: 1px solid #d8c396; }
+  .pantry-summary dt { font-size: 14px; }
+  .pantry-summary dd { margin: 0; font-size: 30px; line-height: 1; font-weight: 600; font-variant-numeric: tabular-nums; text-align: right; }
+  .pantry-summary dd small { display: block; color: #694f2d; font-size: 12px; font-weight: 400; margin-top: 5px; }
+  .pantry-summary > p { font-size: 13px; color: #694f2d; line-height: 1.7; margin-top: 22px; max-width: 32ch; }
+  .metrics { gap: 0; border-bottom: 1px solid #e2d9d0; margin-bottom: 28px; }
+  .metric-card { min-height: 116px; border: 0; border-right: 1px solid #e2d9d0; background: transparent; border-radius: 0; padding: 4px 22px 22px; }
+  .metric-card:first-child { padding-left: 0; }
+  .metric-card:last-child { border-right: 0; }
+  .metric-card:hover { transform: none; background: #fcf7f1; }
+  .metric-label { font-size: 13px; max-width: none; color: #73635c; }
+  .metric-card > strong { font-size: 34px; color: #3c2926; }
+  .metric-note { font-size: 12px; color: #73635c; }
+  .metric-icon { background: transparent; color: #8d3343; border-radius: 0; }
+  .metric-arrow { color: #8d3343; }
+  .purchase-period-card { background: #f7eee6; border-color: #e2d9d0; }
+  .purchase-period-card .eyebrow { font-size: 12px; }
+  th { background: #fcf7f1; color: #73635c; text-transform: none; letter-spacing: 0; }
+  td, .card-footer, .pending-order { border-color: #ede4dc; }
+  .dashboard-columns th { font-size: 12px; }
+  .dashboard-columns td { font-size: 14px; }
+  .dashboard-columns .item-cell strong { font-size: 14px; }
+  .dashboard-columns .item-cell small, .dashboard-columns td.numeric small { font-size: 12px; }
+  .item-mark { border-radius: 50%; }
+  .badge { font-size: 12px; }
+  .dashboard-columns .badge { font-size: 12px; }
+  .supplier-mark { border-radius: 50%; background: #f5eae0; color: #8d3343; }
+  .pending-copy strong { color: #3c2926; font-size: 14px; }
+  .pending-copy small, .delivery-label, .incoming-tip, .workspace-footer { color: #73635c; font-size: 12px; }
+  .field input, .field select, .field textarea { border-color: #e2d9d0; border-radius: 5px; color: #3c2926; }
+  .login { background: #fffdf9; grid-template-columns: .9fr 1fr; }
+  .login-story { background: #f7e6bd; color: #493721; padding: 42px 50px 28px; }
+  .brand-light { color: #493721; }
+  .brand-light .brand-mark { background: transparent; border-color: #d8c396; color: #8d3343; }
+  .brand-light small, .login-story-content .eyebrow, .login-story-content > p:not(.eyebrow), .login-story-footer { color: #694f2d; }
+  .login-story h1 { font-family: Georgia, serif; font-size: clamp(40px, 4.4vw, 64px); line-height: 1.08; font-weight: 400; letter-spacing: -1.8px; }
+  .login-story-content > p:not(.eyebrow) { font-size: 15px; line-height: 1.7; }
+  .login-art { width: 90%; margin-top: 30px; }
+  .login-story-footer { border-color: #d8c396; font-size: 12px; }
+  .login-access h2 { color: #3c2926; font-family: 'Segoe UI', Arial, sans-serif; font-size: 31px; font-weight: 600; }
+  .login-form-wrap > p { font-size: 14px; color: #73635c; }
+  .login-access .field { font-size: 14px; color: #3c2926; }
+  .login-access .field input { font-size: 16px; }
+  .credentials, .login-notice { background: #fcf7f1; border-color: #e2d9d0; border-radius: 5px; color: #73635c; }
+  .role-entry button { border-color: #e2d9d0; border-radius: 5px; }
+  .role-icon { color: #8d3343; background: #f5eae0; }
+  .login-notice p, .login-access footer, .login-divider { font-size: 12px; color: #73635c; }
+  .login-divider span { background: #fffdf9; }
+  button:focus-visible, a:focus-visible, input:focus, select:focus, textarea:focus { outline-color: #8d3343; }
+}
+@media screen and (max-width: 1050px) {
+  .pantry-overview { grid-template-columns: 1fr; gap: 18px; }
+  .pantry-summary dl { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .pantry-summary dl > div { display: block; }
+  .pantry-summary dd { text-align: left; margin-top: 12px; }
+  .pantry-summary > p { max-width: none; }
+  .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .metric-card { padding: 18px; border-bottom: 1px solid #e2d9d0; }
+  .metric-card:first-child { padding-left: 18px; }
+}
+@media screen and (max-width: 540px) {
+  .page-heading h1 { font-size: 30px; }
+  .page-heading p:not(.eyebrow) { font-size: 14px; }
+  .pantry-list-heading { padding: 20px 18px; }
+  .pantry-list-heading h2 { font-size: 20px; }
+  .pantry-row { padding: 15px 16px; gap: 10px; }
+  .pantry-row > .item-mark { display: none; }
+  .pantry-row > svg { width: 14px; }
+  .pantry-row strong { font-size: 13px; }
+  .pantry-row small { font-size: 12px; }
+  .pantry-summary { padding: 22px; }
+  .pantry-summary dl { gap: 12px; }
+  .pantry-summary dt { font-size: 12px; }
+  .metric-label, .metric-note { font-size: 12px; }
+  .metric-card { padding: 15px; }
+  .metric-card:first-child { padding-left: 15px; }
+  .dashboard-columns .item-cell strong, .dashboard-columns td { font-size: 13px; }
+  .dashboard-columns th, .dashboard-columns .badge { font-size: 12px; }
+  .login { grid-template-columns: 1fr; }
+  .login-access { padding: 25px 24px; }
+}
+
+/* La columna del menú lateral se pinta en el contenedor, que mide todo el contenido:
+   así cubre la altura completa también en capturas de página entera. El menú sigue fijo. */
+@media screen {
+  .app-shell { --sidebar-w: 235px; background: linear-gradient(90deg, #f7eee6 calc(var(--sidebar-w) - 1px), #e2d9d0 calc(var(--sidebar-w) - 1px) var(--sidebar-w), transparent var(--sidebar-w)); }
+}
+@media screen and (max-width: 1250px) { .app-shell { --sidebar-w: 215px; } }
+@media screen and (max-width: 1050px) { .app-shell { --sidebar-w: 200px; } }
+@media screen and (max-width: 760px) { .app-shell { background: none; } }

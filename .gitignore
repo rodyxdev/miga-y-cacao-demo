@@ -1,0 +1,26 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.vite/
+.npm-cache/
+artifacts/
+.env*
+!.env.example
+
+.test-build/
+tmp/
+.qa-tools/
+
+# Vinculación y configuración local de despliegue
+.vercel/
+.vercelignore
+
+# Notas internas de trabajo y revisiones de cada fase
+docs/FASE_*.md
+docs/PUBLICACION_VERCEL.md
+docs/direccion-visual.md
+docs/habilidades-diseno.md
+docs/publicacion-diseno.md
+docs/verificacion-despliegue-diseno.json
+docs/capturas-fase*/
+docs/capturas/panel-*.png

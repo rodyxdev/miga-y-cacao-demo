@@ -1,0 +1,16 @@
+/* Texto de navegación y referencias secundarias sobre fondos claros. */
+.nav-item { color: #5d6d55; }
+.avatar { color: #506345; }
+.donut strong span { color: #65725e; }
+.login-access .field { color: #5d714e; }
+.input-unit span { color: #536943; }
+.form-error { color: #944e40; }
+.supplier-card .supplier-avatar { color: #594f3e; }
+.prototype-banner, .prototype-banner strong { color: #536943; }
+.topbar-search button { min-width: 30px; min-height: 30px; color: #65725e; }
+.boot-content { display: flex; flex-direction: column; align-items: center; gap: 22px; }
+.boot-content > svg { color: #65725e; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

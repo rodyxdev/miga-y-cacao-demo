@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "allowImportingTsExtensions": false,
+    "outDir": ".test-build",
+    "rootDir": "src",
+    "declaration": false
+  },
+  "include": ["src/domain/**/*.ts", "src/seed/*.ts", "src/storage/*.ts", "src/documents/**/*.ts"]
+}
